@@ -1,0 +1,17 @@
+{
+  "name": "webcode",
+  "version": "1.0.0",
+  "description": "project web code puro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "web"
+  ],
+  "author": "Gerardo Suarez <gasb47@gmail.com>",
+  "license": "MIT"
+}
