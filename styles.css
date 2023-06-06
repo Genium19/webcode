@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+  }
+  
+  td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 0;
+  }
+  
+  input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    text-transform: uppercase;
+    cursor: pointer; /* Cambia el cursor a una mano para los inputs editables */
+  }
+  
+  input[disabled] {
+    background-color: black; /* Establece el color de fondo en negro para los inputs de solo lectura */
+    cursor: default; /* Cambia el cursor a una flecha para los inputs de solo lectura */
+    user-select: none; /* Evita la selección de texto en los inputs de solo lectura */
+  }
+  
+  input[disabled]:hover {
+    cursor: default; /* Cambia el cursor a una flecha normal sin poder hacer clic en los inputs de solo lectura al pasar el cursor sobre ellos */
+  }
+  

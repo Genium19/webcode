@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crucigrama</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="html2canvas.min.js"></script>
+
+
+  </head>
+  <body>
+    <canvas id="canvas" width="100%" height="100%"></canvas>
+    <h1>Crucigrama</h1>
+
+    <!-- Cuadrícula del crucigrama -->
+    <table>
+      <tr>
+        <td><input type="text" maxlength="1" id="cell00" placeholder="P" /></td>
+        <td><input type="text" maxlength="1" id="cell01" placeholder="A" /></td>
+        <td><input type="text" maxlength="1" id="cell02" placeholder="R" /></td>
+        <td><input type="text" maxlength="1" id="cell03" placeholder="I" /></td>
+        <td><input type="text" maxlength="1" id="cell04" placeholder="S" /></td>
+        <td><input type="text" maxlength="1" id="cell05" disabled /></td>
+        <td><input type="text" maxlength="1" id="cell06" disabled /></td>
+        <td><input type="text" maxlength="1" id="cell07" disabled /></td>
+        <td><input type="text" maxlength="1" id="cell08" disabled /></td>
+        <td><input type="text" maxlength="1" id="cell09" /></td>
+        <td><input type="text" maxlength="1" id="cell10" /></td>
+        <td><input type="text" maxlength="1" id="cell11" /></td>
+        <td><input type="text" maxlength="1" id="cell12" /></td>
+        <td><input type="text" maxlength="1" id="cell13" /></td>
+        <td><input type="text" maxlength="1" id="cell14" /></td>
+        <td><input type="text" maxlength="1" id="cell15" /></td>
+        <td><input type="text" maxlength="1" id="cell16" /></td>
+        <td><input type="text" maxlength="1" id="cell17" /></td>
+        <td><input type="text" maxlength="1" id="cell18" /></td>
+        <td><input type="text" maxlength="1" id="cell19" /></td>
+        <td><input type="text" maxlength="1" id="cell20" /></td>
+        <td><input type="text" maxlength="1" id="cell21" /></td>
+        <td><input type="text" maxlength="1" id="cell22" /></td>
+        <td><input type="text" maxlength="1" id="cell23" /></td>
+        <td><input type="text" maxlength="1" id="cell24" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+        <td><input type="text" maxlength="1" /></td>
+      </tr>
+      <!-- Agrega más filas aquí -->
+    </table>
+
+    <br />
+
+    <!-- Lista de pistas -->
+    <h3>Pistas</h3>
+    <ol>
+      <li id="clue1">Capital de Francia (5 letras)</li>
+      <li id="clue2">Río más largo del mundo (6 letras)</li>
+      <li id="clue3">Instrumento musical de cuerda (6 letras)</li>
+      <!-- Agrega más pistas aquí -->
+    </ol>
+
+    <br />
+
+    <!-- Botón de verificación -->
+    <button onclick="checkAnswers(),createWord()">Verificar respuestas</button>
+    <button onclick="descargarPDF()">Descargar PDF</button>
+
+    <script>
+      function createWord() {}
+      // Función para verificar las respuestas
+      function checkAnswers() {
+        var answers = {
+          cell00: "P",
+          cell01: "A",
+          cell02: "R",
+          cell03: "I",
+          cell04: "S",
+          // Agrega más respuestas aquí
+        };
+
+        var rcorrecta = "";
+
+        // Concatena las respuestas en un solo string
+        for (var cell in answers) {
+          rcorrecta += answers[cell];
+        }
+
+        // Muestra la palabra completa
+        console.log("Respuesta Correcta:", rcorrecta);
+
+        var respuesta = "";
+
+        var cell00 = document.getElementById("cell00").value.toUpperCase();
+        var cell01 = document.getElementById("cell01").value.toUpperCase();
+        var cell02 = document.getElementById("cell02").value.toUpperCase();
+        var cell03 = document.getElementById("cell03").value.toUpperCase();
+        var cell04 = document.getElementById("cell04").value.toUpperCase();
+
+        respuesta = cell00 + cell01 + cell02 + cell03 + cell04;
+
+        console.log("Respuesta Ingresada:", respuesta);
+
+        var correctCount = 0;
+        var incorrectCount = 0;
+        var emptyCount = 0;
+        var bienCount = 0;
+
+        if (rcorrecta === respuesta) {
+          console.log("Respuesta correcta");
+          bienCount++;
+        } else {
+          console.log("Respuesta incorrecta");
+        }
+
+        // Verifica cada respuesta
+        for (var cell in answers) {
+          var input = document.getElementById(cell);
+          var value = input.value.toUpperCase();
+          if (value === answers[cell]) {
+            input.classList.remove("active");
+            correctCount++;
+          } else if (value === "") {
+            input.classList.remove("active");
+            emptyCount++;
+          } else {
+            input.classList.add("active");
+            incorrectCount++;
+          }
+        }
+
+        // Muestra el resultado
+        var message = "Respuestas correctas: " + correctCount + "\n";
+        message += "Respuestas incorrectas: " + incorrectCount + "\n";
+        message += "Palabras correctas: " + bienCount + "\n";
+        message += "Respuestas vacías: " + emptyCount;
+
+        alert(message);
+      }
+
+function descargarPDF() {
+  // Abrir la ventana de impresión
+  window.print();
+
+  // Esperar unos segundos para asegurarse de que la impresión se haya completado
+  setTimeout(function() {
+    // Crear un nuevo objeto jsPDF
+    var doc = new jsPDF();
+
+    // Obtener el elemento body
+    var bodyElement = document.querySelector('body');
+
+    // Utilizar html2canvas para convertir el contenido visible en el cuerpo a una imagen
+    html2canvas(bodyElement).then(function (canvas) {
+      // Obtener la imagen en formato base64
+      var imgData = canvas.toDataURL("image/png");
+
+      // Agregar la imagen al PDF
+      doc.addImage(imgData, "PNG", 10, 10, doc.internal.pageSize.getWidth() - 20, 0);
+
+      // Guardar el PDF como un archivo
+      doc.save('interfaz.pdf');
+    });
+  }, 2000); // Esperar 2 segundos para asegurarse de que la impresión se haya completado
+}
+
+
+
+    </script>
+  </body>
+</html>
