@@ -1,0 +1,41 @@
+.contenedor {
+    position: relative;
+}
+
+.box1>div {
+    position: relative;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(21, 170, 233);
+    display: inline-block;
+    z-index: 2;
+
+}
+
+.box2>div {
+    position: relative;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(88, 215, 219);
+    display: inline-block;
+    z-index: 1;
+
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6 {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
